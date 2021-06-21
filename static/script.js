@@ -1,9 +1,7 @@
 var data = document.getElementById("helper").getAttribute("data");
 data = JSON.parse(data);
-console.log(data);
 var count = Object.keys(data).length;
-console.log(count);
-console.log(data);
+
 
 
 var tbody = document.getElementById("tbody");
@@ -84,13 +82,11 @@ for (x in data) {
 }
 
 function httpGetAsync(debtnid) {
-    console.log(debtnid);
     var id = debtnid.slice(2,);
-    window.location.href = "http://127.0.0.1:8000/?id=" + id + "&status=delete";
+    window.location.href = "http://crudsmongodb.herokuapp.com/?id=" + id + "&status=delete";
 }
 
 function updatedata(upbtnid) {
-    console.log("upbtnid", upbtnid);
     var id = upbtnid.slice(2,);
     var myname = document.getElementById("name" + id).innerHTML;
     var myphoneno = document.getElementById("phoneno" + id).innerHTML;
@@ -113,7 +109,6 @@ var dataToBeSend = {
 };
 function savedata(senderId) {
     var id = senderId.slice(5,);
-    console.log("senderId", id);
 
     var myname = document.getElementById("name" + id).innerHTML;
     var myphoneno = document.getElementById("phoneno" + id).innerHTML;
@@ -133,7 +128,6 @@ function savedata(senderId) {
         delete dataToBeSend[datas];
     }
     document.getElementById("maildata").value = JSON.stringify(dataToBeSend)
-    // console.log(JSON.stringify(dataToBeSend));
 }
 
 if(!window.location.hash.includes("#freshpage")) {

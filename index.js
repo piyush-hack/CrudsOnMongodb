@@ -146,7 +146,7 @@ function sendmail(mytext) {
     const message = {
         from: 'piyushpuniya2001@gamil.com',
         // to: `info@redpositive.in`,
-        to: 'piyushpuniya00@gmail.com',
+        to: 'info@redpositive.in',
         subject: 'Sending Email using Node.js',
         text: `${mytext}`,
         // attachments: [

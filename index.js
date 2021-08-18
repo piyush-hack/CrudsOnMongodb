@@ -11,7 +11,7 @@ const mongoose = require('mongoose'),
 ;
 
 
-mongoose.connect("mongodb+srv://piyush:piyush2001@tabledata.k3zwz.mongodb.net/test", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://your uri here/test", { useNewUrlParser: true, useUnifiedTopology: true });
 
 const db = mongoose.connection;
 
